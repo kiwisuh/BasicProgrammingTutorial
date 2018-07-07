@@ -1,15 +1,24 @@
-
+boolean three = false;
+boolean five = false;
 void setup(){
 //this is where we will be programming
   int b = 0;
   for(int a = 0; a<=100; a++){
-    if(a%3==0){
-      b=b+1;
+    three = (a%3==0);
+    five = (a%5==0);
+    if(three&&five!=true){
+      println("Doo");
     }
-    if(a%5==0){
-      b=b+2;
+    else if(five&&three!=true){
+      println("Rim");
     }
-    switch(b){
+    else if(three&&five){
+      println("Doorim");
+    }
+    else{
+      println(a);
+    }
+    /*switch(b){
       case 0:
         println(a);
         break;
@@ -26,7 +35,7 @@ void setup(){
         println(a);
         break;
     }
-    b=0;
+    b=0;*/
   }
   
 }
